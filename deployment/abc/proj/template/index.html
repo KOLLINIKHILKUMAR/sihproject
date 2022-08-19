@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="preprocess" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+            <input type="file" name="uploaded_file">
+            <input type="radio" value="TFIDF" name="1">TFIDF</input>
+            <input type="radio" value="COUNTVECT" name="1">COUNT</input>
+            <input type="radio" value="WORDTOVECCOS" name="1">W2V_COS</input>
+            <input type="radio" value="WORDTOVECGOG" name="1">W2V_GOG</input>
+            <input type="radio" value="FAST-TEXT" name="1">FAST-TEXT</input>
+            <input type="radio" value="GLOVE" name="1">GLOVE</input>  <br><br>
+            <input type="radio" value="RANDOM_CL" name="2">RANDOM_fOREST</input>
+            <input type="radio" value="DECISION_CL" name="2">DECISION_TREE</input>
+            <input type="radio" value="KNN_CL" name="2">KNN</input>
+            <input type="radio" value="LOG_CL" name="2">LOGISTIC_REGRESSION</input>
+            <input type="radio" value="SVC_CL" name="2">SVC</input>
+            <input type="radio" value="STACK_CL_1" name="2">STACKING_1</input>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
